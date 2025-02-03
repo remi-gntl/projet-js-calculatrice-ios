@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#calculatrice {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background-color: #000;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-rotate {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #1c1c1c !important;
+    border-radius: 50%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-rotate i {
+    font-size: 20px !important;
+    color: white;
+}
+
+#affichage {
+    width: 100%;
+    text-align: right;
+    padding: 40px 30px;
+    font-size: 80px;
+    color: white;
+    border: none;
+    background: transparent;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    direction: rtl;  
+    text-overflow: ellipsis;
+}
+
+#clavier {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px; 
+    justify-content: center;
+    width: 100%;
+}
+
+.basic-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    flex: 0 0 auto; 
+}
+
+.scientific-keys {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    border: none;
+    font-size: 35px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: filter 0.2s;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+}
+
+button:active {
+    filter: brightness(130%);
+}
+
+.btn-gris {
+    background-color: #A5A5A5;
+    color: #000;
+}
+
+.btn-operation {
+    background-color: #FF9F0A;
+    font-size: 40px;
+}
+
+.btn-number {
+    background-color: #333333;
+}
+
+.btn-sci {
+    background-color: #1c1c1c;
+    font-size: 24px;
+}
+
+.double {
+    grid-column: span 2;
+    width: 172px;
+    text-align: left;
+    padding-left: 32px;
+}
+
+#calculatrice.landscape {
+    max-width: 800px;
+}
+
+#calculatrice.landscape .scientific-keys {
+    display: grid;
+}
+
+@media (max-width: 400px) {
+    button {
+        width: 65px;
+        height: 65px;
+        font-size: 30px;
+    }
+    .btn-operation {
+        font-size: 35px;
+    }
+    .btn-sci {
+        font-size: 20px;
+    }
+    .double {
+        width: 142px;
+    }
+    #affichage {
+        font-size: 60px;
+    }
+    #clavier {
+        gap: 15px;
+    }
+}
+
+@media (max-height: 500px) {
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+    .btn-operation {
+        font-size: 32px;
+    }
+    .btn-sci {
+        font-size: 18px;
+    }
+    #affichage {
+        padding: 20px;
+        font-size: 50px;
+    }
+}

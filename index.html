@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice iPhone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="calculatrice" class="portrait">
+        <button id="rotate-btn" class="btn-rotate">
+            <i class="fas fa-sync-alt"></i>
+        </button>
+        <input id="affichage" readonly value="0">
+        <div id="clavier">
+            <!-- Boutons basiques -->
+            <div class="basic-keys">
+                <button onclick="effacer()" class="btn-gris">AC</button>
+                <button onclick="plusMoins()" class="btn-gris">±</button>
+                <button onclick="pourcent()" class="btn-gris">%</button>
+                <button onclick="operation('/')" class="btn-operation">÷</button>
+                
+                <button onclick="ajouterChiffre('7')" class="btn-number">7</button>
+                <button onclick="ajouterChiffre('8')" class="btn-number">8</button>
+                <button onclick="ajouterChiffre('9')" class="btn-number">9</button>
+                <button onclick="operation('*')" class="btn-operation">×</button>
+                
+                <button onclick="ajouterChiffre('4')" class="btn-number">4</button>
+                <button onclick="ajouterChiffre('5')" class="btn-number">5</button>
+                <button onclick="ajouterChiffre('6')" class="btn-number">6</button>
+                <button onclick="operation('-')" class="btn-operation">−</button>
+                
+                <button onclick="ajouterChiffre('1')" class="btn-number">1</button>
+                <button onclick="ajouterChiffre('2')" class="btn-number">2</button>
+                <button onclick="ajouterChiffre('3')" class="btn-number">3</button>
+                <button onclick="operation('+')" class="btn-operation">+</button>
+                
+                <button onclick="ajouterChiffre('0')" class="btn-number double">0</button>
+                <button onclick="ajouterChiffre('.')" class="btn-number">.</button>
+                <button onclick="calculer()" class="btn-operation">=</button>
+            </div>
+
+            <!-- Boutons scientifiques -->
+            <div class="scientific-keys">
+                <button onclick="operation('sqrt')" class="btn-sci">√</button>
+                <button onclick="operation('square')" class="btn-sci">x²</button>
+                <button onclick="operation('cube')" class="btn-sci">x³</button>
+                <button onclick="operation('1/x')" class="btn-sci">1/x</button>
+                
+                <button onclick="operation('sin')" class="btn-sci">sin</button>
+                <button onclick="operation('cos')" class="btn-sci">cos</button>
+                <button onclick="operation('tan')" class="btn-sci">tan</button>
+                <button onclick="operation('log')" class="btn-sci">log</button>
+                
+                <button onclick="operation('ln')" class="btn-sci">ln</button>
+                <button onclick="operation('exp')" class="btn-sci">eˣ</button>
+                <button onclick="operation('pi')" class="btn-sci">π</button>
+                <button onclick="operation('e')" class="btn-sci">e</button>
+                
+                <button onclick="operation('(')" class="btn-sci">(</button>
+                <button onclick="operation(')')" class="btn-sci">)</button>
+                <button onclick="operation('pow')" class="btn-sci">xʸ</button>
+                <button onclick="operation('!')" class="btn-sci">n!</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
